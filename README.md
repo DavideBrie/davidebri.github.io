@@ -1,4 +1,4 @@
-# Jesko
+# Gesko
 
 Simple and minimal Jekyll blog. 
 Forked from [Asko](https://github.com/manuelmazzuola/asko).
@@ -9,7 +9,7 @@ Now easly deployable on Github Pages, with:
 
 ### Features
 
-- [x]Responsive Design
+- [x] Responsive Design
 - [x] Dark/Ligh theme
 - [x] Inline CSS
 - [x] Anchor headings
@@ -32,16 +32,16 @@ Now easly deployable on Github Pages, with:
 
 ## Screenshot
 
-![light-theme](light-theme.png)
-![dark-theme](dark-theme.png)
+![light-theme](https://github.com/P0WEX/Gesko/blob/master/light-theme.png)
+![dark-theme](https://github.com/P0WEX/Gesko/blob/master/dark-theme.png)
 
 ## Installation
 
 Run local server:
 
 ```bash
-$ git clone https://github.com/P0WEX/P0WEX.github.io.git
-$ cd P0WEX.github.io
+$ git clone https://github.com/P0WEX/Gesko.git
+$ cd Gesko
 $ bundle install
 $ bundle exec jekyll serve
 ```
