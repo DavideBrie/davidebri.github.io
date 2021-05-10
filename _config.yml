@@ -1,11 +1,11 @@
-site: Gesko
-title: Gesko
+site: P0Wex
+title: P0WEX
 description: >-
-  just a minimalist, personal blog
+  just a personal blog
 googlewebfonts: Fira+Code:wght@400;500;700
 lang: en-US
 timezone: Rome
-repo: https://github.com/p0wex/Gesko # site repo [optional]
+repo: https://github.com/p0wex/p0wex.github.io # site repo [optional]
 data-theme: dark # default theme "dark" | "light"
 
 author:
@@ -18,8 +18,8 @@ author:
 
 # URL settings
 url: "https://p0wex.github.io/" #
-baseurl: "/Gesko" # leave blank if not wishd
-permalink: "https://p0wex.github.io/Gesko"
+baseurl: # leave blank if not wishd
+permalink: "https://p0wex.github.io/"
 permalink: pretty 
 
 
