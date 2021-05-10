@@ -6,7 +6,7 @@ googlewebfonts: Fira+Code:wght@400;500;700
 lang: en-US
 timezone: Rome
 repo: https://github.com/p0wex/Gesko # site repo [optional]
-mode: dark # default theme "dark" | "light"
+data-theme: dark # default theme "dark" | "light"
 
 author:
   name: p0wex
@@ -17,10 +17,9 @@ author:
   email: your-email@email.com # email adress
 
 # URL settings
-url: "https://p0wex.github.io" #
-baseurl:
-permalink: 
-google_analytics: # leave it blank if not wish
+url: "https://p0wex.github.io/" #
+baseurl: "/Gesko" # leave blank if not wishd
+permalink: "https://p0wex.github.io/Gesko"
 permalink: pretty 
 
 
