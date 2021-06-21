@@ -532,16 +532,17 @@ $link-color: var(--link-color);
     width: 100%;
   }
   &:before {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 100px;
     bottom: 30px;
     content: ' ';
     display: block;
     width: 6px;
-    height: 20%;
+    height: 15%;
+    border-style: dashed;
     margin-left: -3px;
-    background: var(--light-text-color);
+    color: var(--light-text-color);
     z-index: 5;
     @media(max-width: 375px) {
       height: 150%;
