@@ -6,7 +6,6 @@ summary: What's a 2FA and how it works.
 tags: security
 minute: 2
 ---
-# 2FA REVERSE ENGENEERING
 
 First of all, let's dive in and talk about what's a 2 Factor Authentication.
 
@@ -20,7 +19,7 @@ Thus even if someone knows your login credentials or stole them, they still not 
 
 This, in short, it's how 2 Factor Authentication works.
 
-## Why it's called 2-Factor Authentication
+# Why it's called 2-Factor Authentication ❔
 
 To identify yourself into a system, you could be asked 3 main things:
 
@@ -34,11 +33,11 @@ As can you imagine a two factor, involve 2 of these 3 things. One example, equiv
 What about the something we **are**? \
 We're talking about biometrics, for example, fingerprint or face recognition, a great method, but still not perfect.
 
-## How a 2FA code it's made
+# How a 2FA code it's made ⚙️
 
 If you're not familiar, here's a screenshot of the Google Auth app. 
 
-![](https://joshmoulin.com/wp-content/uploads/2015/07/Google-Authenticator.png)
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.xda-developers.com%2Ffiles%2F2020%2F05%2Fgoogle-authenticator-old-b-473x1024.jpg&f=1&nofb=1)
 
 As you can see, there is a code for each account and there is a little pie timer that lasts 30 seconds, at the end of it, it will generate a new one.
 
@@ -51,12 +50,12 @@ When you enable this layer of security, the site will give you a QR code or a st
 That string is a secret key, assigned to your account, that it's combined, in case the app used a TOTP-based algorithm, with a timestamp to generate a new code every 30 seconds.
 
 
-## Can 2FA be reverse engeneered ?
+# Can 2FA be reverse engeneered? 👨‍💻
 
 No. If we use a well-known third-party software and someone gets our code, they can't use it to predict the new ones. The only method they have it's to get access to the third-party app that we use to generate codes.
 
 
-## 2FA Third-party apps - Wich is the best?
+# 2FA Third-party apps - Wich is the best? 💭
 
 As always there are different options to choose from, but by my experience, I can tell that when if you're dealing with multiple accounts, my advice is [Authy](https://authy.com/) since having a lot of feature like:
 
