@@ -7,11 +7,9 @@ tags: security
 minute: 2
 ---
 
-First of all, let's dive in and talk about what's a 2 Factor Authentication.
+Everybody nowadays experienced at least once, after inserting the login credentials to enter a website, the other "tedious" step of writing a temporary code, sent via text messages as token or generated via an authentication app (2FA).
 
-Everybody nowadays experienced at least once, after inserting the login credentials to enter a website, the other "tedious" step of writing a temporary code, send via text messages as token or generated via an authentication app (2FA).
-
-This last step can save your accounts to be hacked. Because it's One-Time 6 digit code and expires in less than a minute, can offer a second layer of security.
+This last step can save your accounts to be hacked. Because it's a One-Time 6 digit code and expires in less than a minute, can offer a second layer of security.
 
 
 Thus even if someone knows your login credentials or stole them, they still not be able to enter if they don't have access to your 2FA app.
@@ -27,7 +25,7 @@ To identify yourself into a system, you could be asked 3 main things:
 2. Something you **are**.
 3. Something you **have**.
 
-As can you imagine a two factor, involve 2 of these 3 things. One example, equivalent to 2FA, that we use in our everyday life, is when we go to an ATM to withdraw some money, we **have** a bank card and we know the pin of it.
+As can you imagine a two factor, involve 2 of these 3 things. An example, similar to 2FA, that we use in our everyday life, is when we go to an ATM to withdraw some money, we **have** a bank card and we **know** the pin of it. That are 2 factor.
 
 
 What about the something we **are**? \
@@ -39,7 +37,7 @@ If you're not familiar, here's a screenshot of the Google Auth app.
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.xda-developers.com%2Ffiles%2F2020%2F05%2Fgoogle-authenticator-old-b-473x1024.jpg&f=1&nofb=1)
 
-As you can see, there is a code for each account and there is a little pie timer that lasts 30 seconds, at the end of it, it will generate a new one.
+As you can see, there is a code for each account and there is a little timer that lasts 30 seconds, at the end of it, it will generate a new one.
 
 This it's basically made by an algorithm that randomly outputs a 6 digit code. This can be implemented in different ways, for example, they could be based on TOTP a Time-Based One-time Password.
 
@@ -52,16 +50,16 @@ That string is a secret key, assigned to your account, that it's combined, in ca
 
 # Can 2FA be reverse engeneered? 👨‍💻
 
-No. If we use a well-known third-party software and someone gets our code, they can't use it to predict the new ones. The only method they have it's to get access to the third-party app that we use to generate codes.
+No. If we use a well-known third-party software and someone gets our code, they can't use it to predict the new ones. The only method they have it's to get access to the app that we use to generate codes.
 
 
 # 2FA Third-party apps - Wich is the best? 💭
 
-As always there are different options to choose from, but by my experience, I can tell that when if you're dealing with multiple accounts, my advice is [Authy](https://authy.com/) since having a lot of feature like:
+As always there are different options to choose from, but by my experience, I can tell that when you're dealing with multiple accounts, my advice is [Authy](https://authy.com/) since having a lot of feature like:
 
 - Password protection
 - Push notifications
-- Encrypted **Backup**
+- Encrypted **Backups**
 - And many more...
 
 And the migration from Google Authenticator was really easy.
