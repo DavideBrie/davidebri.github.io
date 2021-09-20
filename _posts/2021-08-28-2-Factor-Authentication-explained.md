@@ -34,7 +34,7 @@ We're talking about biometrics, for example, fingerprint or face recognition, a 
 
 If you're not familiar, here's a screenshot of the Google Auth app. 
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.xda-developers.com%2Ffiles%2F2020%2F05%2Fgoogle-authenticator-old-b-473x1024.jpg&f=1&nofb=1)
+![](https://play-lh.googleusercontent.com/-15RNeDrob7WSybEtSGTuGu1gj_-RLP_ywlBl8GwoONBKCURKylarxjt8NAT5QKRK00)
 
 As you can see, there is a code for each account and there is a little timer that lasts 30 seconds, at the end of it, it will generate a new one.
 
