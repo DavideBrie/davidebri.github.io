@@ -4,7 +4,6 @@ title: 2 Factor Authenticator explained
 description: What's a 2FA and how it works. 
 summary: What's a 2FA and how it works. 
 tags: security
-minute: 2
 ---
 
 Everybody nowadays experienced at least once, after inserting the login credentials to enter a website, the other "tedious" step of writing a temporary code, sent via text messages as token or generated via an authentication app (2FA).
