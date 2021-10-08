@@ -14,9 +14,9 @@
   <li><strong>TCP Connect Scans (<code class="language-plaintext highlighter-rouge">-sT</code>)</strong></li>
 </ol>
 
-<p>This perform a three-way handshake with the ports specified in the command. Depends on what we get back, we can figure it out how’s the port’s status.
-If we get back a <code class="language-plaintext highlighter-rouge">RST</code> flag set -&gt; the port is <strong>close</strong>;
-If we get back a <code class="language-plaintext highlighter-rouge">SYN/ACK</code> flag set -&gt; the port is <strong>open</strong>;
+<p>This perform a three-way handshake with the ports specified in the command. Depends on what we get back, we can figure it out how’s the port’s status. <br />
+If we get back a <code class="language-plaintext highlighter-rouge">RST</code> flag set -&gt; the port is <strong>close</strong>; <br />
+If we get back a <code class="language-plaintext highlighter-rouge">SYN/ACK</code> flag set -&gt; the port is <strong>open</strong>; <br />
 What if we got nothing back? This mean that the port is hidden behind a firewall and it will be marked as <strong>filtered</strong>;</p>
 
 <ol>
