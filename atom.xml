@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-08T22:00:42+00:00</updated>
+ <updated>2021-10-08T22:01:03+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -25,7 +25,7 @@
 
 &lt;p&gt;So nmap does a check on every port and depending on how the port responds, it can be determined as being open, closed, or filtered (usually by a firewall).&lt;/p&gt;
 
-&lt;h2 id=&quot;scan-types&quot;&gt;Scan types&lt;/h2&gt;
+&lt;h1 id=&quot;scan-types&quot;&gt;Scan types&lt;/h1&gt;
 
 &lt;p&gt;When port scanning with Nmap, there are three basic scan types. These are:&lt;/p&gt;
 
@@ -73,7 +73,7 @@ Keep in mind that this scan require sudo permission, because we need to create r
 
 &lt;p&gt;Send a malformed TCP packet, with only &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PSH&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URG&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FIN&lt;/code&gt; sets and expects a RST response for closed ports.&lt;/p&gt;
 
-&lt;h2 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h2&gt;
+&lt;h1 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h1&gt;
 
 &lt;p&gt;This scripts, written in &lt;a href=&quot;https://en.wikipedia.org/wiki/Lua_(programming_language)&quot;&gt;LUA&lt;/a&gt;, expands the nmap capability.
 The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;[many more]&lt;/em&gt;(https://nmap.org/book/nse-usage.html).&lt;/p&gt;

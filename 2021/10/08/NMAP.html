@@ -6,7 +6,7 @@
 
 <p>So nmap does a check on every port and depending on how the port responds, it can be determined as being open, closed, or filtered (usually by a firewall).</p>
 
-<h2 id="scan-types">Scan types</h2>
+<h1 id="scan-types">Scan types</h1>
 
 <p>When port scanning with Nmap, there are three basic scan types. These are:</p>
 
@@ -54,7 +54,7 @@ Keep in mind that this scan require sudo permission, because we need to create r
 
 <p>Send a malformed TCP packet, with only <code class="language-plaintext highlighter-rouge">PSH</code>, <code class="language-plaintext highlighter-rouge">URG</code> and <code class="language-plaintext highlighter-rouge">FIN</code> sets and expects a RST response for closed ports.</p>
 
-<h2 id="nmap-scripting-engine---nse">Nmap Scripting Engine - NSE</h2>
+<h1 id="nmap-scripting-engine---nse">Nmap Scripting Engine - NSE</h1>
 
 <p>This scripts, written in <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)">LUA</a>, expands the nmap capability.
 The standard scripts, stored at <code class="language-plaintext highlighter-rouge">/usr/share/nmap/scripts</code>,  are divded by categorys such as: <strong>safe</strong>, <strong>intrusive</strong>, <strong>vuln</strong>, <strong>exploit</strong>, <strong>auth</strong>, <strong>brute</strong> and <em>[many more]</em>(https://nmap.org/book/nse-usage.html).</p>
