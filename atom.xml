@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-08T22:13:57+00:00</updated>
+ <updated>2021-10-08T22:23:03+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -34,8 +34,8 @@
 &lt;/ol&gt;
 
 &lt;p&gt;This perform a three-way handshake with the ports specified in the command. Depends on what we get back, we can figure it out how’s the port’s status. &lt;br /&gt;
-If we get back a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RST&lt;/code&gt; flag set -&amp;gt; the port is &lt;strong&gt;close&lt;/strong&gt;; &lt;br /&gt;
-If we get back a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SYN/ACK&lt;/code&gt; flag set -&amp;gt; the port is &lt;strong&gt;open&lt;/strong&gt;; &lt;br /&gt;
+If we get back a [RST] flag set -&amp;gt; the port is &lt;strong&gt;close&lt;/strong&gt;; &lt;br /&gt;
+If we get back a [SYN/ACK] flag set -&amp;gt; the port is &lt;strong&gt;open&lt;/strong&gt;; &lt;br /&gt;
 What if we got nothing back? This mean that the port is hidden behind a firewall and it will be marked as &lt;strong&gt;filtered&lt;/strong&gt;;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -59,19 +59,19 @@ Keep in mind that this scan require sudo permission, because we need to create r
   &lt;li&gt;&lt;strong&gt;TCP Null Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sN&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Send TCP request is sent with no flags set at all, and if it’s closed it should send back the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RST&lt;/code&gt; flag.&lt;/p&gt;
+&lt;p&gt;Send TCP request is sent with no flags set at all, and if it’s closed it should send back the [RST] flag.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;TCP FIN Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sF&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The request is sent with only the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FIN&lt;/code&gt;  flag. Once again, nmap expects a RST if the port is closed.&lt;/p&gt;
+&lt;p&gt;The request is sent with only the [FIN]  flag. Once again, nmap expects a RST if the port is closed.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;TCP Xmas Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sX&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Send a malformed TCP packet, with only &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PSH&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URG&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FIN&lt;/code&gt; sets and expects a RST response for closed ports.&lt;/p&gt;
+&lt;p&gt;Send a malformed TCP packet, with only [PSH], [URG] and [FIN] sets and expects a [RST] response for closed ports.&lt;/p&gt;
 
 &lt;h1 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h1&gt;
 
