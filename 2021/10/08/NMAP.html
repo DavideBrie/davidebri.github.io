@@ -15,8 +15,8 @@
 </ol>
 
 <p>This perform a three-way handshake with the ports specified in the command. Depends on what we get back, we can figure it out how’s the port’s status. <br />
-If we get back a [RST] flag set -&gt; the port is <strong>close</strong>; <br />
-If we get back a [SYN/ACK] flag set -&gt; the port is <strong>open</strong>; <br />
+If we get back a <a href="">RST</a> flag set -&gt; the port is <strong>close</strong>; <br />
+If we get back a <a href="">SYN/ACK</a> flag set -&gt; the port is <strong>open</strong>; <br />
 What if we got nothing back? This mean that the port is hidden behind a firewall and it will be marked as <strong>filtered</strong>;</p>
 
 <ol>
@@ -30,7 +30,7 @@ Keep in mind that this scan require sudo permission, because we need to create r
   <li><strong>UDP Scans (<code class="language-plaintext highlighter-rouge">-sU</code>)</strong></li>
 </ol>
 
-<p>When a packet is sent to an open UDP port, there should be no response. When this happens, nmap refers to the port as being <strong>open</strong> or <strong>filtered</strong></p>
+<p>When a packet is sent to an open <a href="">UDP</a> port, there should be no response. When this happens, nmap refers to the port as being <strong>open</strong> or <strong>filtered</strong></p>
 
 <p><br /></p>
 
@@ -40,19 +40,19 @@ Keep in mind that this scan require sudo permission, because we need to create r
   <li><strong>TCP Null Scans (<code class="language-plaintext highlighter-rouge">-sN</code>)</strong></li>
 </ol>
 
-<p>Send TCP request is sent with no flags set at all, and if it’s closed it should send back the [RST] flag.</p>
+<p>Send TCP request is sent with no flags set at all, and if it’s closed it should send back the <a href="">RST</a> flag.</p>
 
 <ol>
   <li><strong>TCP FIN Scans (<code class="language-plaintext highlighter-rouge">-sF</code>)</strong></li>
 </ol>
 
-<p>The request is sent with only the [FIN]  flag. Once again, nmap expects a RST if the port is closed.</p>
+<p>The request is sent with only the <a href="">FIN</a>  flag. Once again, nmap expects a <a href="">RST</a> if the port is closed.</p>
 
 <ol>
   <li><strong>TCP Xmas Scans (<code class="language-plaintext highlighter-rouge">-sX</code>)</strong></li>
 </ol>
 
-<p>Send a malformed TCP packet, with only [PSH], [URG] and [FIN] sets and expects a [RST] response for closed ports.</p>
+<p>Send a malformed TCP packet, with only <a href="">PSH</a>, <a href="">URG</a> and <a href="">FIN</a> sets and expects a <a href="">RST</a> response for closed ports.</p>
 
 <h1 id="nmap-scripting-engine---nse">Nmap Scripting Engine - NSE</h1>
 
