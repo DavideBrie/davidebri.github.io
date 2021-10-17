@@ -4,13 +4,96 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-17T17:32:18+00:00</updated>
+ <updated>2021-10-17T20:54:26+00:00</updated>
  <id></id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Smb Protocol 101</title>
+   <link href="/2021/10/17/SMB-protocol-101.html"/>
+   <updated>2021-10-17T00:00:00+00:00</updated>
+   <id>/2021/10/17/SMB-protocol-101</id>
+   <content type="html">&lt;p&gt;I discovered this protocol by doing a &lt;a href=&quot;https://hackthebox.eu&quot;&gt;HTB&lt;/a&gt;’s room which involved a Windows-based machine, and it was my very first time hacking that OS.&lt;/p&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Also known as &lt;strong&gt;Server Message Block&lt;/strong&gt;, is a client-server protocol, originally created by IBM than updated by Microsoft, that allow access to shared file, printers and ports over the network. &lt;br /&gt;
+We mostly see SMB services running on Windows machines. &lt;br /&gt;
+User side, SMB authentication requires a username and password to allow access to the server. It is controlled by the system administrator, who can add or block users and keep tabs on who is allowed in. &lt;br /&gt;
+Meanwhile at share-level,users have to enter a one-time password to access the shared file or server, but no username is required.&lt;/p&gt;
+
+&lt;h2 id=&quot;different-version&quot;&gt;Different Version&lt;/h2&gt;
+
+&lt;p&gt;There are different variations of this protocol:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SMBv1, released by IBM and modified by Microsoft, this version is also known because the ransomware &lt;a href=&quot;https://en.wikipedia.org/wiki/WannaCry_ransomware_attack&quot;&gt;Wannacry&lt;/a&gt; used a vulnerability of this version to spread itself over the network.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SMBv2, performance boosted - debuted in Windows Vista&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SMBv3, security increased like end-to-end encryption - introduced in Windows 7&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SMBv3.02, possibility to completely disable SMBv1- came with Windows 8.1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SMBv3.1.1, introduced AES-128 encryption, mitm protection and session verification - released in Windows 10&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-use-smb&quot;&gt;How to use SMB&lt;/h3&gt;
+
+&lt;p&gt;Fisrt of all we should know that it operate via TCP on port 445. If we are operating from a Linux machine the command to see the shares is :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;smbclient &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;HOSTNAME&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This will output something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Server &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;is Sat Aug 10 15:58:27 1996
+Timezone is UTC+10.0
+Password: 
+&lt;span class=&quot;nv&quot;&gt;Domain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;WORKGROUP] &lt;span class=&quot;nv&quot;&gt;OS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;Windows NT 3.51] &lt;span class=&quot;nv&quot;&gt;Server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;NT LAN Manager 3.51]
+
+&lt;span class=&quot;nv&quot;&gt;Server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;ZIMMERMAN] &lt;span class=&quot;nv&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[]&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Workgroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;WORKGROUP] &lt;span class=&quot;nv&quot;&gt;Domain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=[]&lt;/span&gt;
+
+        Sharename      Type      Comment
+        &lt;span class=&quot;nt&quot;&gt;---------&lt;/span&gt;      &lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt;      &lt;span class=&quot;nt&quot;&gt;-------&lt;/span&gt;
+        ADMIN&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;        Disk      Remote Admin
+        public         Disk      Public 
+        C&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;            Disk      Default share
+        IPC&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;          IPC       Remote IPC
+        OReilly        Printer   OReilly
+        print&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;        Disk      Printer Drivers
+
+
+This machine has a browse list:
+
+        Server               Comment
+        &lt;span class=&quot;nt&quot;&gt;---------&lt;/span&gt;            &lt;span class=&quot;nt&quot;&gt;-------&lt;/span&gt;
+        HOPPER               Samba 1.9.15p8
+        KERNIGAN             Samba 1.9.15p8
+        LOVELACE             Samba 1.9.15p8
+        RITCHIE              Samba 1.9.15p8
+        ZIMMERMAN            
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want to reach the public directory on the ZIMMERMAN machine we have tio type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;smbclient &lt;span class=&quot;se&quot;&gt;\\\\&lt;/span&gt;ZIMMERMAN&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;public
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It may ask you for a password.&lt;/p&gt;
+
+&lt;p&gt;Once we are connected we can do a bunch of operation, type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;smb: \&amp;gt; help&lt;/code&gt; for more info.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Nmap</title>
