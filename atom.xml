@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-17T20:54:26+00:00</updated>
+ <updated>2021-10-17T21:05:30+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -24,7 +24,7 @@
 &lt;p&gt;Also known as &lt;strong&gt;Server Message Block&lt;/strong&gt;, is a client-server protocol, originally created by IBM than updated by Microsoft, that allow access to shared file, printers and ports over the network. &lt;br /&gt;
 We mostly see SMB services running on Windows machines. &lt;br /&gt;
 User side, SMB authentication requires a username and password to allow access to the server. It is controlled by the system administrator, who can add or block users and keep tabs on who is allowed in. &lt;br /&gt;
-Meanwhile at share-level,users have to enter a one-time password to access the shared file or server, but no username is required.&lt;/p&gt;
+Meanwhile at share-level, users have to enter a one-time password to access the shared file or server, but no username is required.&lt;/p&gt;
 
 &lt;h2 id=&quot;different-version&quot;&gt;Different Version&lt;/h2&gt;
 
@@ -38,19 +38,21 @@ Meanwhile at share-level,users have to enter a one-time password to access the s
     &lt;p&gt;SMBv2, performance boosted - debuted in Windows Vista&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;SMBv3, security increased like end-to-end encryption - introduced in Windows 7&lt;/p&gt;
+    &lt;p&gt;SMBv3, security increased via end-to-end encryption - introduced in Windows 7&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;SMBv3.02, possibility to completely disable SMBv1- came with Windows 8.1&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;SMBv3.1.1, introduced AES-128 encryption, mitm protection and session verification - released in Windows 10&lt;/p&gt;
+    &lt;p&gt;SMBv3.1.1, introduced AES-128 encryption, MITM protection and session verification - released in Windows 10&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Always check your SMB’s version and update it, if possible.&lt;/p&gt;
+
 &lt;h3 id=&quot;how-to-use-smb&quot;&gt;How to use SMB&lt;/h3&gt;
 
-&lt;p&gt;Fisrt of all we should know that it operate via TCP on port 445. If we are operating from a Linux machine the command to see the shares is :&lt;/p&gt;
+&lt;p&gt;Fisrt of all we should know that it operate via TCP on port 445. If we are operating from a Linux machine, the command to see the shares is :&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;smbclient &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;HOSTNAME&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -85,9 +87,9 @@ This machine has a browse list:
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If you want to reach the public directory on the ZIMMERMAN machine we have tio type:&lt;/p&gt;
+&lt;p&gt;If you want to reach the public directory on the machine we have to type:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;smbclient &lt;span class=&quot;se&quot;&gt;\\\\&lt;/span&gt;ZIMMERMAN&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;public
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;smbclient &lt;span class=&quot;se&quot;&gt;\\\\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;HOSTNAME&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;public
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;It may ask you for a password.&lt;/p&gt;
 
