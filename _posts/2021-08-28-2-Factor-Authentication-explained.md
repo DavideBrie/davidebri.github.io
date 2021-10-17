@@ -6,6 +6,7 @@ summary: What's a 2FA and how it works.
 tags: security
 ---
 
+
 Everybody nowadays experienced at least once, after inserting the login credentials to enter a website, the other "tedious" step of writing a temporary code, sent via text messages as token or generated via an authentication app (2FA).
 
 This last step can save your accounts to be hacked. Because it's a One-Time 6 digit code and expires in less than a minute, can offer a second layer of security.
@@ -15,6 +16,7 @@ Thus even if someone knows your login credentials or stole them, they still not 
 
 
 This, in short, it's how 2 Factor Authentication works.
+
 
 # Why it's called 2-Factor Authentication ❔
 
@@ -62,3 +64,6 @@ As always there are different options to choose from, but by my experience, I ca
 - And many more...
 
 And the migration from Google Authenticator was really easy.
+
+
+

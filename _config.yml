@@ -27,7 +27,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
+  hard_wrap: false
 
 exclude:
   - .jekyll-cache
@@ -40,7 +40,9 @@ exclude:
   
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: ["<!-- ", " -->", "<!---", "--->"]
+  ignore:
+    envs: all
 
 sass:
   sass_dir: _sass
@@ -81,5 +83,3 @@ defaults:
 relative_links:
   enabled:     true
   collections: false
-
-
