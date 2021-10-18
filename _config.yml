@@ -14,7 +14,7 @@
   username: p0wex # general username
   github: p0wex # github username
   twitter: P0Wex # twitter username
-  email: # email adress
+  email: powex@pm.me
 
 # URL settings
 url: "https://powex.ml" #
@@ -27,7 +27,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  hard_wrap: false
 
 exclude:
   - .jekyll-cache

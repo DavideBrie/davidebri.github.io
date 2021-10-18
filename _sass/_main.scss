@@ -35,12 +35,12 @@ html {
 html,
 html[data-theme="light"] {
 	--very-light-text-color: rgb(222, 222, 222);
-	--light-text-color: rgb(89, 183, 255);
+	--light-text-color: rgb(196, 187, 240);
 	--medium-text-color: #555;
 	--main-text-color: #333;
 	--dark-text-color: #393e46;
-	--link-color: rgb(50, 87, 209);
-	--code-bg-color: rgb(245, 245, 245);
+	--link-color: rgb(70, 10, 196);
+	--code-bg-color: rgb(250, 250, 250);
 
 	background-color: rgb(255, 255, 255);
 
@@ -183,7 +183,6 @@ pre {
 code {
 	margin: unset;
 	padding: 0.1rem;
-	color: var(--light-text-color);
 }
 
 pre code {
@@ -192,11 +191,11 @@ pre code {
 }
 
 pre {
-	border-width: 3px;
+	border-width: 5px;
 	padding: 0.8rem;
-	white-space: pre-wrap;
+	border-radius: 5px;
 	border-style: none none none solid;
-	border-color: var(--light-text-color);
+	border-color: var(--link-color);
 }
 
 img {
@@ -545,14 +544,13 @@ $link-color: var(--link-color);
     left: 50%;
     top: 100px;
     bottom: 30px;
-    content: ' ';
+    content: " ";
     display: block;
     width: 6px;
     height: 15%;
     border-style: dashed;
     margin-left: -3px;
     color: var(--light-text-color);
-    z-index: 5;
     @media(max-width: 375px) {
       height: 150%;
     }
