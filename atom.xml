@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-18T16:53:42+00:00</updated>
+ <updated>2021-10-18T17:09:31+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -161,7 +161,7 @@ Keep in mind that this scan require sudo permission, because we need to create r
 &lt;h1 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h1&gt;
 
 &lt;p&gt;This scripts, written in &lt;a href=&quot;https://en.wikipedia.org/wiki/Lua_(programming_language)&quot;&gt;LUA&lt;/a&gt;, expands the nmap capability.
-The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;[many more]&lt;/em&gt;(https://nmap.org/book/nse-usage.html).&lt;/p&gt;
+The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;(many more)&lt;/em&gt;[https://nmap.org/book/nse-usage.html].&lt;/p&gt;
 
 &lt;p&gt;It’s possible to use this scripts typing:&lt;/p&gt;
 
