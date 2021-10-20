@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-18T17:09:53+00:00</updated>
+ <updated>2021-10-20T13:04:38+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -115,53 +115,51 @@ This machine has a browse list:
 &lt;p&gt;When port scanning with Nmap, there are three basic scan types. These are:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;TCP Connect Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sT&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP Connect Scans (-sT)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;This perform a three-way handshake with the ports specified in the command. Depends on what we get back, we can figure it out how’s the port’s status. &lt;br /&gt;
-If we get back a &lt;a href=&quot;&quot;&gt;RST&lt;/a&gt; flag set -&amp;gt; the port is &lt;strong&gt;close&lt;/strong&gt;; &lt;br /&gt;
-If we get back a &lt;a href=&quot;&quot;&gt;SYN/ACK&lt;/a&gt; flag set -&amp;gt; the port is &lt;strong&gt;open&lt;/strong&gt;; &lt;br /&gt;
+If we get back a &lt;strong&gt;RST&lt;/strong&gt; flag set -&amp;gt; the port is &lt;strong&gt;close&lt;/strong&gt;; &lt;br /&gt;
+If we get back a &lt;strong&gt;SYN/ACK&lt;/strong&gt; flag set -&amp;gt; the port is &lt;strong&gt;open&lt;/strong&gt;; &lt;br /&gt;
 What if we got nothing back? This mean that the port is hidden behind a firewall and it will be marked as &lt;strong&gt;filtered&lt;/strong&gt;;&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;SYN Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sS&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SYN Scans (-sS)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Also known as &lt;em&gt;stealth&lt;/em&gt; scan, is used to scan the TCP port-range of a prey(s).
+&lt;p&gt;Also known as &lt;em&gt;stealth&lt;/em&gt; scan, is used to scan the TCP port-range.
 Keep in mind that this scan require sudo permission, because we need to create raw packets not the full TCP handshake.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;UDP Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sU&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;UDP Scans (-sU)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;When a packet is sent to an open &lt;a href=&quot;&quot;&gt;UDP&lt;/a&gt; port, there should be no response. When this happens, nmap refers to the port as being &lt;strong&gt;open&lt;/strong&gt; or &lt;strong&gt;filtered&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When a packet is sent to an open &lt;strong&gt;UDP&lt;/strong&gt; port, there should be no response. When this happens, nmap refers to the port as being &lt;strong&gt;open&lt;/strong&gt; or &lt;strong&gt;filtered&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Additionally there are several less common port scan types like:&lt;/p&gt;
+&lt;h3 id=&quot;additionally-there-are-several-less-common-port-scan-types-like&quot;&gt;Additionally there are several less common port scan types like:&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;TCP Null Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sN&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP Null Scans (-sN)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Send TCP request is sent with no flags set at all, and if it’s closed it should send back the &lt;a href=&quot;&quot;&gt;RST&lt;/a&gt; flag.&lt;/p&gt;
+&lt;p&gt;Send TCP request is sent with no flags set at all, and if it’s closed it should send back the &lt;strong&gt;RST&lt;/strong&gt; flag.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;TCP FIN Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sF&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP FIN Scans (-sF)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The request is sent with only the &lt;a href=&quot;&quot;&gt;FIN&lt;/a&gt;  flag. Once again, nmap expects a &lt;a href=&quot;&quot;&gt;RST&lt;/a&gt; if the port is closed.&lt;/p&gt;
+&lt;p&gt;The request is sent with only the &lt;strong&gt;FIN&lt;/strong&gt; flag. Once again, nmap expects a &lt;strong&gt;RST&lt;/strong&gt; if the port is closed.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;TCP Xmas Scans (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sX&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP Xmas Scans (-sX)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Send a malformed TCP packet, with only &lt;a href=&quot;&quot;&gt;PSH&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;URG&lt;/a&gt; and &lt;a href=&quot;&quot;&gt;FIN&lt;/a&gt; sets and expects a &lt;a href=&quot;&quot;&gt;RST&lt;/a&gt; response for closed ports.&lt;/p&gt;
+&lt;p&gt;Send a malformed TCP packet, with only &lt;strong&gt;PSH&lt;/strong&gt;, &lt;strong&gt;URG&lt;/strong&gt; and &lt;strong&gt;FIN&lt;/strong&gt; sets and expects a &lt;strong&gt;RST&lt;/strong&gt; response for closed ports.&lt;/p&gt;
 
 &lt;h1 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h1&gt;
 
-&lt;p&gt;This scripts, written in &lt;a href=&quot;https://en.wikipedia.org/wiki/Lua_(programming_language)&quot;&gt;LUA&lt;/a&gt;, expands the nmap capability.
-The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;(many more)&lt;/em&gt;[https://nmap.org/book/nse-usage.html].&lt;/p&gt;
+&lt;p&gt;This scripts, written in [LUA](https://en.wikipedia.org/wiki/Lua_(programming_language), expands the nmap capability.
+The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;&lt;a href=&quot;https://nmap.org/book/nse-usage.html&quot;&gt;many more&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;It’s possible to use this scripts typing:&lt;/p&gt;
 
