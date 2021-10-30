@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-29T10:15:51+00:00</updated>
+ <updated>2021-10-30T15:05:20+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -158,7 +158,7 @@ Keep in mind that this scan require sudo permission, because we need to create r
 
 &lt;h1 id=&quot;nmap-scripting-engine---nse&quot;&gt;Nmap Scripting Engine - NSE&lt;/h1&gt;
 
-&lt;p&gt;This scripts, written in [LUA](https://en.wikipedia.org/wiki/Lua_(programming_language), expands the nmap capability.
+&lt;p&gt;This scripts, written in LUA, expands the nmap capability.
 The standard scripts, stored at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/nmap/scripts&lt;/code&gt;,  are divded by categorys such as: &lt;strong&gt;safe&lt;/strong&gt;, &lt;strong&gt;intrusive&lt;/strong&gt;, &lt;strong&gt;vuln&lt;/strong&gt;, &lt;strong&gt;exploit&lt;/strong&gt;, &lt;strong&gt;auth&lt;/strong&gt;, &lt;strong&gt;brute&lt;/strong&gt; and &lt;em&gt;&lt;a href=&quot;https://nmap.org/book/nse-usage.html&quot;&gt;many more&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;It’s possible to use this scripts typing:&lt;/p&gt;
