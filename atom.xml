@@ -4,13 +4,57 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2021-10-30T15:05:20+00:00</updated>
+ <updated>2021-11-10T16:23:46+00:00</updated>
  <id></id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>My First NFT</title>
+   <link href="/2021/11/09/My-First-NFT.html"/>
+   <updated>2021-11-09T00:00:00+00:00</updated>
+   <id>/2021/11/09/My-First-NFT</id>
+   <content type="html">&lt;p&gt;No, it’not some &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpeg&lt;/code&gt; of a pixeled &lt;a href=&quot;https://opensea.io/collection/cyberkongz&quot;&gt;cartoon animal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-brief-introduction-to-nft&quot;&gt;A brief introduction to NFT&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;N&lt;/strong&gt;on-&lt;strong&gt;F&lt;/strong&gt;ungible &lt;strong&gt;T&lt;/strong&gt;okens are like cryptocurrencies, they are cryptographic tokens registered on a specific blockchain. However, they’re each entirely unique (and therefore, not mutually interchangeable) — like serialized collectibles of the digital world. &lt;br /&gt;
+There are multiple types of NFTs out there. Digital art can be registered on a blockchain, for example, as a way to certify authenticity and ownership. The result would be digital art NFTs that represent ownership of original, authentic artworks.&lt;/p&gt;
+
+&lt;p&gt;Or..&lt;/p&gt;
+
+&lt;h2 id=&quot;what-i-bought-&quot;&gt;What I bought ?&lt;/h2&gt;
+
+&lt;p&gt;A &lt;strong&gt;&lt;em&gt;.crypto domain name&lt;/em&gt;&lt;/strong&gt;. &lt;br /&gt;
+YES! Thanks to &lt;a href=&quot;https://unstoppabledomains.com/&quot;&gt;Unstoppable Domains&lt;/a&gt; we can now purchase a domain name that is a smart contract on a public blockchian, in my case the domain I own is an ERC 721 on the Ethereum blockchain.&lt;/p&gt;
+
+&lt;p&gt;These domains (or NFT) are stored on it’s owner’s wallet and nobody can take them away. 
+Thing that may happen if you own a traditional domain, it can be censured or taken down.&lt;/p&gt;
+
+&lt;p&gt;Another feature that convinced me to buy one, is that there are not renewal fees ever!&lt;/p&gt;
+
+&lt;p&gt;I was able to bought it at 40$. When I’m writing this post I did not Claim it yet. Because the gas fees are too high so it’s not worth it, I’m waiting that Unstoppable Domains enable Polygon network so the Minting and Gass fees will be almost zero.&lt;/p&gt;
+
+&lt;p&gt;This will happen on 15th of November.&lt;/p&gt;
+
+&lt;h2 id=&quot;pretty-cool-but-why&quot;&gt;Pretty cool, but WHY?&lt;/h2&gt;
+
+&lt;p&gt;This NFT can be used as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Universal username across apps and websites&lt;/li&gt;
+  &lt;li&gt;Website URL&lt;/li&gt;
+  &lt;li&gt;Payment address for wallets (Multiple wallets)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My favourite use is the last one, a easy-to-say wallet address is pretty usefull expecially if it can accept multiple currencies.&lt;/p&gt;
+
+&lt;p&gt;I’ll update this post when I’ll do the Claiming.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>SMB protocol 101</title>
