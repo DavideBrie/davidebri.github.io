@@ -17,9 +17,9 @@
   email: powex@pm.me
 
 # URL settings
-url: "https://powex.ml" #
+url: "p0wex.github.io" #
 baseurl: # leave blank if not wishd
-permalink: "https://powex.ml/"
+permalink: "p0wex.github.io/"
 permalink: pretty 
 
 
