@@ -25,7 +25,10 @@
     </title>
   
   
-
+  {% if site.googlewebfonts %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family={{ site.googlewebfonts }}&display=swap" rel="stylesheet">
+  {% endif %}
   
   <link rel="shortcut icon" href="{{ site.url }}/favicon.png">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/atom.xml">
