@@ -41,3 +41,25 @@ My favourite use is the last one, a easy-to-say wallet address is pretty usefull
 
 
 I'll update this post when I'll do the Claiming.
+
+
+--- **Update of 09/12/2021**
+
+I went back to Unstoppable domains and, finally, I was able to mint my NFT, I mint my domain. Now it's in my wallet aka it's mine.
+
+But Im sad to see that I have to wait untill 12/12 to manage it.
+
+--- **Update of 12/12/2021**
+
+The dashboard displays 5 option:
+
+1. **`Crypto`**: here I can set a wallet for, litterally any coin!
+2. **`Website`**: you can link you traditional website, (I linked this blog!), or you can build, as they call it, a decentrilized website (dweb) via some template they offer.
+3. **`Verify`**: This feature is enabled only for domains minted on Ethereum :(
+4. **`Profile`**: Here you can setup your profile with your name, surname, profile picture, socials and emails (public and private).
+5. **`Picture`** [BETA]: If you own an NFT, you can upload it to be displayed as your domain's image
+
+## Conclusions
+
+At this point, I can easly say that an NFT domain is a nice to have, it's a powerful tool thanks to  its rialiability. Maybe in the future it will have more functionality so its better if you grab yours now ;).
+If you want to try it here it's my referral for [10$ off](https://unstoppabledomains.com/?ref=97f9bc9954454aa).
