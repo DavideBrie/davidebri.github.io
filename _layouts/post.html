@@ -43,12 +43,12 @@ layout: default
         repo="p0wex/p0wex.github.io"
         issue-term="pathname"
         label="Comment"
-        if (theme == "dark")
+        let currentMode = document.documentElement.getAttribute('data-theme');
+        if (currentMode === "dark") {
           theme="github-dark"
-        else
+        } else {
           theme="github-light"
-        
-        
+        }        
         crossorigin="anonymous"
         async>
 </script>
