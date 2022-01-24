@@ -20,14 +20,6 @@ layout: default
   {{ content }}
 </section>
 
-<script src="https://utteranc.es/client.js"
-        repo="p0wex/p0wex.github.io"
-        issue-term="pathname"
-        label="Comment"
-        theme="photon-dark"
-        crossorigin="anonymous"
-        async>
-</script>
 
 <section>
 
@@ -46,3 +38,17 @@ layout: default
 
   </nav>
 </section>
+
+<script src="https://utteranc.es/client.js"
+        repo="p0wex/p0wex.github.io"
+        issue-term="pathname"
+        label="Comment"
+        if (theme == "dark")
+          theme="github-dark"
+        else
+          theme="github-light"
+        
+        
+        crossorigin="anonymous"
+        async>
+</script>
