@@ -4,7 +4,7 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2022-02-09T23:17:42+00:00</updated>
+ <updated>2022-02-09T23:18:07+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -68,7 +68,7 @@ And this is called &lt;a href=&quot;https://overseerr.dev&quot;&gt;Overseerr&lt;
 &lt;p&gt;Now that we now what services does what, we can connect everything up and start &lt;strong&gt;our Netflix&lt;/strong&gt;.
 I drew this little scheme to help you get everything right:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/stack.png&quot; alt=&quot;schema1&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/stack1.png&quot; alt=&quot;schema1&quot; /&gt;
 &lt;em&gt;I tried my best at drawing all this :’)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I tested this infrastructure easly on a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi 4&lt;/a&gt; and it went
