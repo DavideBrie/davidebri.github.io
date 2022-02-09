@@ -37,8 +37,8 @@ the content. For that we need a Torrent client to interface these apps.
 
 ### Transmission
 
-The simplest I found was [Transmission](https://transmissionbt.com/). It is a basic torrent client.
-It's easy to setup to let it talk to others apps like those mentioned before.
+The simplest torrent client I found was [Transmission](https://transmissionbt.com/).
+It's easy to setup and to let it talk to others apps like those mentioned before.
 
 ### Overseerr
 
@@ -58,8 +58,8 @@ all flawless.
 I decided to use docker-compose to easly manage every service. [Here](https://gist.github.com/P0WEX/c4db33f3f7fbf710fa256075e410eedf) you can find the docker-compose.yml file, if you are curious.
 
 **DISCLAIMER**\
-II showed you how there are possibilities to all the streaming services there are out there, and get your own for free, 
-but it goes without saying that it's for **educational purpose only**.
+I showed you that there are some alternatives to all the paid streaming services there are out there, and get your own for free, 
+but it goes without saying that this above it's for **educational purpose only**.
  
 
 
