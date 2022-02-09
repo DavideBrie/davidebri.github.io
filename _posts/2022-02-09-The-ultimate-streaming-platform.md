@@ -3,7 +3,7 @@ layout: post
 title: The ultimate streaming platform DIY
 description: an homemade streaming platform, for educational purpose only
 summary: Using Plex, Radarr, Sonarr, Prowlarr, Overseerr and Transmission we can build our all-in-one straming services for free.
-tags: 
+tags: DIY
 ---
 ## Is Netflix worth?
 This question wondered in my mind in the last months.
@@ -50,7 +50,7 @@ And this is called [Overseerr](https://overseerr.dev).
 Now that we now what services does what, we can connect everything up and start **our Netflix**.
 I drew this little scheme to help you get everything right:
 
-![schema1](/assets/img/stack.png)
+![schema1](/assets/img/stack1.png)
 *I tried my best at drawing all this :')*
 
 I tested this infrastructure easly on a [Raspberry Pi 4](https://www.raspberrypi.org/) and it went
