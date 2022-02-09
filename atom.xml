@@ -4,13 +4,83 @@
  <title>P0WEX</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2022-01-24T11:03:38+00:00</updated>
+ <updated>2022-02-09T22:48:35+00:00</updated>
  <id></id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>The ultimate streaming platform DIY</title>
+   <link href="/2022/02/09/The-ultimate-streaming-platform.html"/>
+   <updated>2022-02-09T00:00:00+00:00</updated>
+   <id>/2022/02/09/The-ultimate-streaming-platform</id>
+   <content type="html">&lt;h2 id=&quot;is-netflix-worth&quot;&gt;Is Netflix worth?&lt;/h2&gt;
+&lt;p&gt;This question wondered in my mind in the last months.&lt;/p&gt;
+
+&lt;p&gt;A lot of streaming services were born lately and this made difficult to get everything 
+we want without paying at least 5 different subscriptions.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-researches&quot;&gt;The researches&lt;/h2&gt;
+
+&lt;h3 id=&quot;plex&quot;&gt;Plex&lt;/h3&gt;
+&lt;p&gt;So I just &lt;em&gt;DuckDuckgo&lt;/em&gt;ed, and my first result was &lt;a href=&quot;https://www.plex.tv/&quot;&gt;Plex&lt;/a&gt;, I have
+heard of it in the past, but never understand it deeply.
+Turns out that it transform yuor local Movies and Shows in a self-hostable streaming service,
+that you can access from anywhere.&lt;/p&gt;
+
+&lt;p&gt;Thus, it’s a &lt;a href=&quot;https://www.netflix.com/&quot;&gt;Netflix&lt;/a&gt; but with your contents.&lt;/p&gt;
+
+&lt;h3 id=&quot;sonarr-radarr-and-prowlarr&quot;&gt;Sonarr, Radarr and Prowlarr&lt;/h3&gt;
+
+&lt;p&gt;A lot of people online, mentioned other services alongside Plex, and those let me go
+down the rabbit hole:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://sonarr.tv&quot;&gt;Sonarr&lt;/a&gt; is a PVR (Personalized Video Recorder) for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://radarr.video/&quot;&gt;Radarr&lt;/a&gt; is a movie collection manager for Usenet and BitTorrent users. Same feature as Sonarr.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://prowlarr.com/&quot;&gt;Prowlarr&lt;/a&gt; is an indexer manager/proxy and integrate with other &lt;em&gt;arr&lt;/em&gt; apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So this “arr”s ecosystem let us manage and find all we want when we want but not actually get 
+the content. For that we need a Torrent client to interface these apps.&lt;/p&gt;
+
+&lt;h3 id=&quot;transmission&quot;&gt;Transmission&lt;/h3&gt;
+
+&lt;p&gt;The simplest I found was &lt;a href=&quot;https://transmissionbt.com/&quot;&gt;Transmission&lt;/a&gt;. It is a basic torrent client.
+It’s easy to setup to let it talk to others apps like those mentioned before.&lt;/p&gt;
+
+&lt;h3 id=&quot;overseerr&quot;&gt;Overseerr&lt;/h3&gt;
+
+&lt;p&gt;A final touch will be merging &lt;strong&gt;Radarr&lt;/strong&gt; and &lt;strong&gt;Sonarr&lt;/strong&gt; together in a better UI/UX experience.
+And this is called &lt;a href=&quot;https://overseerr.dev&quot;&gt;Overseerr&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-result&quot;&gt;The result&lt;/h2&gt;
+
+&lt;p&gt;Now that we now what services does what, we can connect everything up and start &lt;strong&gt;our Netflix&lt;/strong&gt;.
+I drew this little scheme to help you get everything right:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/stack.png&quot; alt=&quot;schema1&quot; /&gt;
+&lt;em&gt;I tried my best at drawing all this :’)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I tested this infrastructure easly on a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi 4&lt;/a&gt; and it went
+all flawless.
+I decided to use docker-compose to easly manage every service. &lt;a href=&quot;https://gist.github.com/P0WEX/c4db33f3f7fbf710fa256075e410eedf&quot;&gt;Here&lt;/a&gt; you can find the docker-compose.yml file, if you are curious.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt;&lt;br /&gt;
+II showed you how there are possibilities to all the streaming services there are out there, and get your own for free, 
+but it goes without saying that it’s for &lt;strong&gt;educational purpose only&lt;/strong&gt;.&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>My First NFT</title>
