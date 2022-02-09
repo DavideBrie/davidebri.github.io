@@ -50,7 +50,7 @@ And this is called [Overseerr](https://overseerr.dev).
 Now that we now what services does what, we can connect everything up and start **our Netflix**.
 I drew this little scheme to help you get everything right:
 
-![schema1](./assets/img/stack.png)
+![schema1](/assets/img/stack.png)
 *I tried my best at drawing all this :')*
 
 I tested this infrastructure easly on a [Raspberry Pi 4](https://www.raspberrypi.org/) and it went
