@@ -1,25 +1,25 @@
-  site: P0Wex
-  title: P0WEX
+  site: DavideBrie
+  title: DavideBrie
   description: >-
     just a personal blog
   googlewebfonts: Fira+Code:wght@400;500;700
   lang: en-US
   timezone: Rome
-  repo: https://github.com/p0wex/p0wex.github.io # site repo [optional]
+  repo: https://github.com/DavideBrie/DavideBrie.github.io # site repo [optional]
   data-theme: dark # default theme "dark" | "light"
 
   author:
-  name: p0wex
+  name: DavideBrie
   bio: just a minimalist, personal blog
-  username: p0wex # general username
-  github: p0wex # github username
-  twitter: P0Wex # twitter username
+  username: DavideBrie # general username
+  github: DavideBrie # github username
+  twitter: DavideBrie # twitter username
   email: powex@pm.me
 
 # URL settings
-url: "p0wex.github.io" #
+url: "DavideBrie.github.io" #
 baseurl: # leave blank if not wishd
-permalink: "p0wex.github.io/"
+permalink: "DavideBrie.github.io/"
 permalink: pretty 
 
 

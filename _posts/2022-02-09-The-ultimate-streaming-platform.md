@@ -55,7 +55,7 @@ I drew this little scheme to help you get everything right:
 
 I tested this infrastructure easly on a [Raspberry Pi 4](https://www.raspberrypi.org/) and it went
 all flawless.
-I decided to use docker-compose to easly manage every service. [Here](https://gist.github.com/P0WEX/c4db33f3f7fbf710fa256075e410eedf) you can find the docker-compose.yml file, if you are curious.
+I decided to use docker-compose to easly manage every service. [Here](https://gist.github.com/DavideBrie/c4db33f3f7fbf710fa256075e410eedf) you can find the docker-compose.yml file, if you are curious.
 
 **DISCLAIMER**\
 I showed you that there are some alternatives to all the paid streaming services there are out there, and get your own for free, 
