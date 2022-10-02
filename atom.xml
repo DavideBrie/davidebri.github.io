@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>DavideBrie</title>
+ <title>DavideBri</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2022-07-01T12:47:22+00:00</updated>
+ <updated>2022-10-02T16:50:30+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -73,7 +73,7 @@ I drew this little scheme to help you get everything right:&lt;/p&gt;
 
 &lt;p&gt;I tested this infrastructure easly on a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi 4&lt;/a&gt; and it went
 all flawless.
-I decided to use docker-compose to easly manage every service. &lt;a href=&quot;https://gist.github.com/DavideBrie/c4db33f3f7fbf710fa256075e410eedf&quot;&gt;Here&lt;/a&gt; you can find the docker-compose.yml file, if you are curious.&lt;/p&gt;
+I decided to use docker-compose to easly manage every service. &lt;a href=&quot;https://gist.github.com/DavideBri/c4db33f3f7fbf710fa256075e410eedf&quot;&gt;Here&lt;/a&gt; you can find the docker-compose.yml file, if you are curious.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt;&lt;br /&gt;
 I showed you that there are some alternatives to all the paid streaming services there are out there, and get your own for free, 
