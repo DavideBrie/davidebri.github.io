@@ -1,25 +1,25 @@
-  site: DavideBrie
-  title: DavideBrie
+  site: DavideBri
+  title: DavideBri
   description: >-
     just a personal blog
   googlewebfonts: Fira+Code:wght@400;500;700
   lang: en-US
   timezone: Rome
-  repo: https://github.com/DavideBrie/DavideBrie.github.io # site repo [optional]
+  repo: https://github.com/DavideBri/DavideBri.github.io # site repo [optional]
   data-theme: dark # default theme "dark" | "light"
 
   author:
-  name: DavideBrie
+  name: DavideBri
   bio: just a minimalist, personal blog
-  username: DavideBrie # general username
-  github: DavideBrie # github username
-  twitter: DavideBrie # twitter username
+  username: DavideBri # general username
+  github: DavideBri # github username
+  twitter: DavideBri # twitter username
   email: powex@pm.me
 
 # URL settings
-url: "DavideBrie.github.io" #
+url: "DavideBri.github.io" #
 baseurl: # leave blank if not wishd
-permalink: "DavideBrie.github.io/"
+permalink: "DavideBri.github.io/"
 permalink: pretty 
 
 
