@@ -4,13 +4,83 @@
  <title>DavideBri</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2022-10-02T16:50:30+00:00</updated>
+ <updated>2022-12-22T17:37:21+00:00</updated>
  <id></id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>A 120$ Reentrancy attack</title>
+   <link href="/2022/12/22/120$-Reentrancy-attack.html"/>
+   <updated>2022-12-22T00:00:00+00:00</updated>
+   <id>/2022/12/22/120$-Reentrancy-attack</id>
+   <content type="html">&lt;p&gt;Since I wanted to gather as more information as possible about the Web3 ecosystem, I started looking for some meetup in my area.
+I found this one that was all about Blockchain develepment called &lt;strong&gt;Web3 Night&lt;/strong&gt;, at my university, organized by &lt;a href=&quot;https://pisa.dev&quot;&gt;Pisa Dev&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-it-started&quot;&gt;Where it started&lt;/h2&gt;
+
+&lt;p&gt;One of the speaker, made a presentation about how smart contracts can be really easy to write but hard to make them secure, and showed a bunch of tool to help developers writing more secure smart contracts.&lt;/p&gt;
+
+&lt;p&gt;As part of the talk, the speaker challenged the audience to try and find any potential vulnerabilities in &lt;a href=&quot;https://polygonscan.com/address/0xbAAf846f531d98DFca8Eb06D4B2e2948A5A593C7#code#L1&quot;&gt;a smart contract that he had provided&lt;/a&gt;. 
+Being a computer science student with a keen interest in blockchain, I eagerly accepted the challenge and set about analyzing the contract.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-challenge&quot;&gt;The challenge&lt;/h2&gt;
+
+&lt;p&gt;Once home and some intense scrutiny (using a tool he suggested called &lt;a href=&quot;https://github.com/crytic/slither&quot;&gt;slinther&lt;/a&gt;), I finally hit upon something interesting: a potential &lt;strong&gt;reentrancy attack&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;For those unfamiliar with the concept, a reentrancy attack is a type of vulnerability that allows an attacker to repeatedly call a function in a smart contract, essentially allowing them to drain the contract’s balance and potentially causing it to fail.&lt;/p&gt;
+
+&lt;p&gt;The part of the contact interested is the following:&lt;/p&gt;
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;withdraw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;balanceOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Insufficient funds&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;payable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;balanceOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Transfer failed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;balanceOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;As we can see, the update of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;balance&lt;/code&gt; is being made after a the transaction is made and this opens up a problem.&lt;/p&gt;
+
+&lt;p&gt;We could make another smart contract interact with this vulnerable one, and use a function called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;receive()&lt;/code&gt; that is triggered everytime a payment is made.
+Inside this function we can &lt;em&gt;re-call&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withdraw()&lt;/code&gt; immediatelly, and since the balance will not be updated in time, we can drain the contract!&lt;/p&gt;
+
+&lt;p&gt;An example of the code used:&lt;/p&gt;
+
+&lt;div class=&quot;language-solidity highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;receive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;external&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;payable&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etherBank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;balance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;reentering...&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;etherBank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withdraw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;victim account drained&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//trandfer the funds from the contract to me
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;payable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;transfer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;balance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;time-to-rob-the-bank&quot;&gt;Time to rob the Bank!&lt;/h2&gt;
+
+&lt;p&gt;I was able to confirm my suspicions by writing a test case and running it on a local Ethereum testnet in the &lt;a href=&quot;https://remix.ethereum.org&quot;&gt;Remix IDE&lt;/a&gt;. 
+To my amazement, the attack worked exactly as I had predicted, and the smart contract’s balance was quickly drained.&lt;/p&gt;
+
+&lt;p&gt;I immediately deployed my contract to mainnet and…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;120 $ WORTH OF MATIC IN MY WALLET!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;some-consideration&quot;&gt;Some consideration&lt;/h2&gt;
+
+&lt;p&gt;This bug, is one of the most famous in the smart contracts world, therefore nowadays is really unlikely to find one, thanks to all the tools that are available to help devs in the process of building their contracts.&lt;/p&gt;
+
+&lt;p&gt;But discovering the reentrancy attack was a thrilling experience for me, and it reinforced my belief in the importance of constantly testing and reviewing code for vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;Overall, attending the talk and participating in the challenge was a valuable learning experience.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>The ultimate streaming platform DIY</title>
