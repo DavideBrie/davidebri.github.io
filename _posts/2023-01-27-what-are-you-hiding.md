@@ -3,7 +3,7 @@ layout: post
 title: what are you hiding?
 description: Some toughts about I live pricavy online
 summary: privacy online  
-tags: security privacy touhgts
+tags: security privacy thougts
 ---
 
 Anonymity online has become a hot topic in recent years, with many questioning why people would want to hide their identities online. But the truth is, anonymity is not about hiding something, it's about protecting ourselves and our resources from potential harm.
@@ -14,5 +14,4 @@ However, diving into the topic of online privacy can quickly become overwhelming
 
 It's important to understand that online privacy is not just about hiding something, it's about protecting ourselves and our resources. By taking the time to educate ourselves and implement some basic precautions, we can ensure that our personal information is safe and secure.
 
-Wait 
 This This may be a good start : [Privacy guides](https://www.privacyguides.org/)
