@@ -15,4 +15,4 @@ However, diving into the topic of online privacy can quickly become overwhelming
 It's important to understand that online privacy is not just about hiding something, it's about protecting ourselves and our resources. By taking the time to educate ourselves and implement some basic precautions, we can ensure that our personal information is safe and secure.
 
 Wait 
-This This may be a good start : (Privacy guides)[https://www.privacyguides.org/]
+This This may be a good start : [Privacy guides](https://www.privacyguides.org/)
