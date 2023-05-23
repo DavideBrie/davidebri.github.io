@@ -3,7 +3,7 @@ layout: post
 title: A 120$ Reentrancy attack
 description: How I won 120$ exploiting a Reentrancy attack on a Ethereum Smart Contract.
 summary: How I won 120$ exploiting a Reentrancy attack on a Ethereum Smart Contract, and what I learn from it.
-tags: blockchain security
+tags: web3 security
 ---
 
 Since I wanted to gather as more information as possible about the Web3 ecosystem, I started looking for some meetup in my area.

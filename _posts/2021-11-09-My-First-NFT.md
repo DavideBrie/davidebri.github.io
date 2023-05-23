@@ -3,7 +3,7 @@ layout: post
 title: My First NFT
 description: I bought an NFT. 
 summary: Why I own a NFT.  
-tags: blockchain
+tags: web3
 ---
 
 No, it'not some `.jpeg` of a pixeled [cartoon animal](https://opensea.io/collection/cyberkongz).
