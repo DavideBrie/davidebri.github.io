@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "The Ugly Truth About My First Startup Failure",
+      "category" : "",
+      "tags"     : "thoughts",
+      "url"      : "/2023/03/21/my-first-startup-fail.html",
+      "date"     : "2023-03-21 00:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "what are you hiding?",
       "category" : "",
       "tags"     : "security, privacy, thoughts",
@@ -11,7 +19,7 @@
     {
       "title"    : "A 120$ Reentrancy attack",
       "category" : "",
-      "tags"     : "blockchain, security",
+      "tags"     : "web3, security",
       "url"      : "/2022/12/22/120$-Reentrancy-attack.html",
       "date"     : "2022-12-22 00:00:00 +0000"
     } ,
@@ -27,7 +35,7 @@
     {
       "title"    : "My First NFT",
       "category" : "",
-      "tags"     : "blockchain",
+      "tags"     : "web3",
       "url"      : "/2021/11/09/My-First-NFT.html",
       "date"     : "2021-11-09 00:00:00 +0000"
     } ,
