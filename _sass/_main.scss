@@ -342,7 +342,7 @@ time {
 
 main {
 	display: flex;
-	max-width: 47rem;
+	max-width: 55rem;
 	margin: -5rem auto 0;
 	padding: 2.4rem 2rem;
 	flex-direction: column;
@@ -443,6 +443,7 @@ color: #333;
     padding: 10px 10px 10px 35px;
     color: var(--main-text-color);
     -webkit-appearance: none;
+    appaerance: none;
     background-color: rgba(128, 128, 128, 0.1);
     border: 1px solid rgba(128, 128, 128, 0.1);
     &::-webkit-input-placeholder {
@@ -532,13 +533,15 @@ $link-color: var(--link-color);
 
 
 .timeline {
-  position: center;
+  position: relative;
   width: 650px;
   margin: -6em auto;
   padding: 1px;
   list-style-type: none;
+  height: 100%;
   @media(max-width: 860px) {
     width: 100%;
+    margin: 0 auto;
   }
   &:before {
     position: fixed;
@@ -550,17 +553,20 @@ $link-color: var(--link-color);
     width: 6px;
     height: 15%;
     border-style: dashed;
-    margin-left: -3px;
+    margin-left: -6px;
     color: var(--light-text-color);
-    @media(max-width: 375px) {
-      height: 150%;
+    @media (max-width: 860px) {
+      width: 3px;
+      margin-left: -3px;
     }
   }
   li {
     padding: 2em 0;
+	  
     @media(max-width: 860px) {
       padding: 2em 0;
     }
+	  
     &::after {
       content: "";
       display: block;
@@ -570,7 +576,6 @@ $link-color: var(--link-color);
     }
   }
 }
-
 
 .direction-l {
   position: relative;
