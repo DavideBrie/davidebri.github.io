@@ -4,7 +4,7 @@
  <title>DavideBri</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2023-07-31T16:36:54+00:00</updated>
+ <updated>2023-07-31T16:42:12+00:00</updated>
  <id></id>
  <author>
    <name></name>
@@ -13,10 +13,10 @@
 
  
  <entry>
-   <title></title>
-   <link href="/2023/07/31/2023-03-21-my-first-startup-fail.html"/>
-   <updated>2023-07-31T16:36:54+00:00</updated>
-   <id>/2023/07/31/2023-03-21-my-first-startup-fail</id>
+   <title>Learning from missteps. My journey through a Startup Accelerator Program</title>
+   <link href="/2023/03/21/my-first-startup-fail.html"/>
+   <updated>2023-03-21T00:00:00+00:00</updated>
+   <id>/2023/03/21/my-first-startup-fail</id>
    <content type="html">&lt;p&gt;I just finished a startup accelerator program where talented individuals and early stage startups come together to develop ideas, 
 form teams and build MVPs with support from experts.&lt;/p&gt;
 
