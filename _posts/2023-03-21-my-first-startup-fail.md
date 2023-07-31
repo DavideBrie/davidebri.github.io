@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Ugly Truth About My First Startup Failure
+title: Learning from Missteps: My journey through a Startup Accelerator Program
 description: A candid tale of my first startup's downfall - filled with mistakes, misjudgments and valuable wisdom gained the hard way.
 summary:  
 tags: thoughts
