@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learning from missteps. My journey through a Startup Accelerator Program
+title: My Experience in a Startup Accelerator
 description: A candid tale of my first startup's downfall - filled with mistakes, misjudgments and valuable wisdom gained the hard way.
 summary:  
 tags: thoughts
