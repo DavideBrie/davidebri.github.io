@@ -1,12 +1,7 @@
 ---
 layout: default
 ---
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="{{ page.title | escape }}" />
-<meta property="og:description" content="{{ page.description | strip_html | truncatewords: 20 }}" />
-<meta property="og:url" content="{{ page.url | absolute_url }}" />
-<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}" />
-<meta property="og:type" content="article" />
+
 
 <section class="post">
   <div class="flex-row-between">
