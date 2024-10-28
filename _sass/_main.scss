@@ -364,7 +364,7 @@ main {
   .social-footer-icons {
      
     .fa {
-      font-size: 1.5rem;
+      font-size: 1.9rem;
       color: #a9a9a9;
 
       &:hover {
@@ -533,7 +533,7 @@ $link-color: var(--link-color);
 
 
 .timeline {
-  position: center;
+  position: relative;
   width: 650px;
   margin: -6em auto;
   padding: 1px;
