@@ -12,6 +12,13 @@
   
   <meta name="fediverse:creator" content="@davidebri@hachyderm.io">
 
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:description" content="{{ page.description | strip_html | truncatewords: 20 }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}" />
+  <meta property="og:type" content="article" />
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.css">
