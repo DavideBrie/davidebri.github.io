@@ -767,15 +767,28 @@ $link-color: var(--link-color);
 }
 
 .reference {
+  position: relative;
   text-decoration: none; /* Remove default underline */
   border-bottom: 3.5px dotted $link-color; /* Red dotted underline */
   color: inherit; /* Inherit text color */
   padding-bottom: 2px; /* Adjust spacing for readability */
+ 
 }
+.reference:hover::after{
+  content: attr(show-text);
+  position: absolute;
+  bottom: 100%; /* Position above the text */
+  left: 0; 
+  background-color: rgb(19, 20, 24, 90%); /* Dark background */
+  color: var(--main-text-color); /* White text for contrast */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  white-space: normal;
+  
+  transform: translateY(-5px);
+  visibility: visible;
+  z-index: 10;
 
-/* Styling for the red asterisk */
-.reference-asterisk {
-  color: $link-color; /* Make the asterisk red */
-  font-weight: bold;
-  margin-left: 2px; /* Small space between the word and asterisk */
+
 }
