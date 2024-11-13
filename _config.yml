@@ -18,9 +18,9 @@ email: davidebrienza@pm.me
 logo: /assets/img/placeholder.png
 
 # URL settings
-url: "DavideBri.github.io" #
+url: "davidebri.github.io" #
 baseurl: # leave blank if not wishd
-permalink: "DavideBri.github.io/"
+permalink: "davidebri.github.io/"
 permalink: pretty 
 
 
